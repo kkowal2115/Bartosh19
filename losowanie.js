@@ -1,0 +1,35 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let images = [30];
+    images[1] = "<img src='1.png'>";
+    images[2] = "<img src='2.png'>";
+    images[3] = "<img src='3.png'>";
+    images[4] = "<img src='4.png'>";
+    images[5] = "<img src='5.png'>";
+    images[6] = "<img src='3.png'>";
+    images[7] = "<img src='7.png'>";
+    images[8] = "<img src='8.png'>";
+    images[9] = "<img src='9.png'>";
+    images[10] = "<img src='10.png'>";
+    images[11] = "<img src='11.png'>";
+    images[12] = "<img src='12.png'>";
+    images[13] = "<img src='13.png'>";
+    images[14] = "<img src='14.png'>";
+    images[15] = "<img src='15.png'>";
+    images[16] = "<img src='16.png'>";
+    images[17] = "<img src='17.png'>";
+    images[18] = "<img src='18.png'>";
+    images[19] = "<img src='19.png'>";
+    images[20] = "<img src='20.png'>";
+    images[21] = "<img src='21.png'>";
+    images[22] = "<img src='22.png'>";
+    images[23] = "<img src='23.png'>";
+    images[24] = "<img src='24.png'>";
+    images[25] = "<img src='25.png'>";
+    images[26] = "<img src='26.png'>";
+    images[27] = "<img src='27.png'>";
+    images[28] = "<img src='28.png'>";
+    images[29] = "<img src='29.png'>";
+    images[30] = "<img src='30.png'>";
+    
+    let liczba = Math.floor((Math.random() * 30) + 1);
+    document.getElementById('obraz').innerHTML=images[liczba]});

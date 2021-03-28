@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="cool.ico" type="image/x-icon">
+    <title>Prezencik</title>
+    <script src="losowanie.js"></script>
+    <script>
+       
+       function zeroWiodace(i){
+
+if(i<10){
+    return "0"+i;
+}
+else{
+    return i;
+}
+       }
+       
+    function zegarDoMatury(){      
+       
+       
+       const current = new Date();
+        const matura = new Date(2021,4,4,9);
+        var difference = matura.getTime() - current.getTime();
+        var sec = difference / 1000;
+        var min = sec / 60;
+        var hour = min / 60;
+        var days = hour / 24;
+        var secT = Math.floor(sec % 60);
+        var minT = Math.floor(min % 60);
+        var hourT = Math.floor(hour % 24);
+        var daysT = Math.floor(days);
+        if(difference > 0){
+            document.getElementById('count').innerHTML = zeroWiodace(daysT)+ "<br>" + zeroWiodace(hourT) + ":" + zeroWiodace(minT) + ":" + zeroWiodace(secT);
+        }
+        else{
+            document.getElementById('count').innerHTML = "Tak zwana ulga"
+        }
+    }
+    setInterval(zegarDoMatury, 1000);
+    </script>
+</head>
+<body>
+    
+
+    <div class="mech">
+        <form action="#">
+            <fieldset>
+                <legend>Słówko na dziś:</legend>
+                <div id="obraz"></div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="ref">
+        <button onclick="location.reload();">Odśwież</button>
+    </div>
+    <div class="counter">
+    <div id="count"></div>
+    </div>
+</body>
+</html>
